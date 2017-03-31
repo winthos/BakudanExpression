@@ -48,7 +48,9 @@
      <Compile Include="Assets\Scripts\BombThrow.cs" />
      <Compile Include="Assets\Scripts\BombThrowController.cs" />
      <Compile Include="Assets\Scripts\TimedDestroy.cs" />
+     <Compile Include="Assets\TreeController.cs" />
      <Compile Include="Assets\YoungGrassController.cs" />
+     <Compile Include="Assets\lookatme.cs" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />

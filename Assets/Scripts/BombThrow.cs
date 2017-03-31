@@ -7,6 +7,8 @@ public class BombThrow : MonoBehaviour
     public float ForwardSpeed = 10f;
     public GameObject PreFabToSpawn;
 
+    public GameObject ArrowToSpawn;
+
    // public Vector3 ForwardDirection;
     public float DespawnTimer = 0.7f;
 
@@ -27,6 +29,13 @@ public class BombThrow : MonoBehaviour
             //spawn in the explosion and the hitbox associated with it
             //destroy this projectile
             GameObject Bakudan = (GameObject)Instantiate(PreFabToSpawn, transform.position, transform.rotation);
+            GameObject Arrow = (GameObject)Instantiate(ArrowToSpawn, transform.position, transform.rotation);
+            Arrow.GetComponent<lookatme>().Forward = true;
+            if(PreFabToSpawn.name == "RWBakudan")
+            {
+                Arrow.GetComponent<lookatme>().Forward = false;
+                Arrow.GetComponent<lookatme>().Backward = true;
+            }
             Destroy(gameObject);
         }
 	}
@@ -37,6 +46,13 @@ public class BombThrow : MonoBehaviour
         if(col.gameObject.tag == "Bomb")
         {
             GameObject Bakudan = (GameObject)Instantiate(PreFabToSpawn, transform.position, transform.rotation);
+            GameObject Arrow = (GameObject)Instantiate(ArrowToSpawn, transform.position, transform.rotation);
+            Arrow.GetComponent<lookatme>().Forward = true;
+            if (PreFabToSpawn.name == "RWBakudan")
+            {
+                Arrow.GetComponent<lookatme>().Forward = false;
+                Arrow.GetComponent<lookatme>().Backward = true;
+            }
             Destroy(gameObject);
         }
 
