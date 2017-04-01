@@ -3,11 +3,16 @@ using System.Collections;
 
 public class FlowerController : MonoBehaviour 
 {
+    public bool BigFlower = false;
 
 	// Use this for initialization
 	void Start ()
     {
-	
+        if (BigFlower == true)
+        {
+            gameObject.GetComponentInChildren<Animator>().SetTrigger("ToOld");
+            gameObject.GetComponentInChildren<Animator>().SetInteger("State", 1);
+        }
 	}
 	
 	// Update is called once per frame

@@ -3,11 +3,18 @@ using System.Collections;
 
 public class TreeController : MonoBehaviour 
 {
+
+    public bool SmallTree = false;
+
     public GameObject WhereIsTheAnimator;
 	// Use this for initialization
 	void Start ()
     {
-	
+	    if(SmallTree == true)
+        {
+            WhereIsTheAnimator.GetComponent<Animator>().SetTrigger("ToSmallTree");
+            WhereIsTheAnimator.GetComponent<Animator>().SetInteger("State", 1);
+        }
 	}
 	
 	// Update is called once per frame

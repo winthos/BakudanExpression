@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\TreeController.cs" />
      <Compile Include="Assets\Scripts\YoungGrassController.cs" />
      <Compile Include="Assets\Scripts\lookatme.cs" />
+     <Compile Include="Assets\SlowlyFadeOut.cs" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />

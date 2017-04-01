@@ -3,11 +3,22 @@ using System.Collections;
 
 public class BoulderController : MonoBehaviour 
 {
+    public bool BigBoulder = false;
+
 
 	// Use this for initialization
 	void Start ()
     {
-	
+	    if(BigBoulder == true)
+        {
+            gameObject.GetComponent<Animator>().SetTrigger("ToBig");
+            gameObject.GetComponent<Animator>().SetInteger("State", 1);
+        }
+
+        if (BigBoulder == false)
+        {
+
+        }
 	}
 	
 	// Update is called once per frame
