@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.IO;
+using System.Collections.Generic;
 
+[System.Serializable]
 public class BoulderController : MonoBehaviour 
 {
     public bool BigBoulder = false;
@@ -15,17 +18,59 @@ public class BoulderController : MonoBehaviour
             gameObject.GetComponent<Animator>().SetInteger("State", 1);
         }
 
-        if (BigBoulder == false)
+        if (File.Exists(Application.persistentDataPath + "/" + gameObject.transform.parent.name + ".txt"))
         {
+            StreamReader sr = File.OpenText(Application.persistentDataPath + "/" + gameObject.transform.parent.name + ".txt");
+            string placeholder = " ";
+
+            placeholder = sr.ReadLine();
+            float whatState = float.Parse(placeholder);
+
+            if(whatState == 0)
+            {
+                gameObject.GetComponent<Animator>().SetTrigger("ToSmall");
+                gameObject.GetComponent<Animator>().SetInteger("State", 0);
+            }
+
+            if (whatState == 1)
+            {
+                gameObject.GetComponent<Animator>().SetTrigger("ToBig");
+                gameObject.GetComponent<Animator>().SetInteger("State", 1);
+            }
+
+            sr.Close();
 
         }
-	}
+    }
 	
 	// Update is called once per frame
 	void Update ()
     {
-	
-	}
+        if (Input.GetKeyDown("p"))
+        {
+            Save();
+            //gameObject.transform.parent.name
+        }
+    }
+
+    void Save()
+    {
+        if (File.Exists(Application.persistentDataPath + "/" + gameObject.transform.parent.name + ".txt"))
+        {
+            //  print("opening save file to save again");
+            StreamWriter sw = File.CreateText(Application.persistentDataPath + "/" + gameObject.transform.parent.name + ".txt");
+            sw.WriteLine(gameObject.GetComponentInChildren<Animator>().GetInteger("State"));
+            sw.Close();
+        }
+
+        else
+        {
+            // print("making new file");
+            StreamWriter save = File.CreateText(Application.persistentDataPath + "/" + gameObject.transform.parent.name + ".txt");
+            save.WriteLine(gameObject.GetComponentInChildren<Animator>().GetInteger("State"));
+            save.Close();
+        }
+    }
 
     void OnTriggerEnter(Collider col)
     {

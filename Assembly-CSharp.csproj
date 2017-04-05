@@ -49,6 +49,8 @@
      <Compile Include="Assets\CarController.cs" />
      <Compile Include="Assets\DamController.cs" />
      <Compile Include="Assets\FlowerController.cs" />
+     <Compile Include="Assets\LargeClockHandController.cs" />
+     <Compile Include="Assets\PlayerPositionSave.cs" />
      <Compile Include="Assets\Scripts\BombThrow.cs" />
      <Compile Include="Assets\Scripts\BombThrowController.cs" />
      <Compile Include="Assets\Scripts\CabinController.cs" />
@@ -57,6 +59,9 @@
      <Compile Include="Assets\Scripts\YoungGrassController.cs" />
      <Compile Include="Assets\Scripts\lookatme.cs" />
      <Compile Include="Assets\SlowlyFadeOut.cs" />
+     <Compile Include="Assets\SmallClockHandController.cs" />
+     <Compile Include="Assets\TinyLakeController.cs" />
+     <Compile Include="Assets\sundialcontroller.cs" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />

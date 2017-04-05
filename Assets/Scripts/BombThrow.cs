@@ -30,12 +30,13 @@ public class BombThrow : MonoBehaviour
             //destroy this projectile
             GameObject Bakudan = (GameObject)Instantiate(PreFabToSpawn, transform.position, transform.rotation);
             GameObject Arrow = (GameObject)Instantiate(ArrowToSpawn, transform.position, transform.rotation);
-            Arrow.GetComponent<lookatme>().Forward = true;
+            /*Arrow.GetComponent<lookatme>().Forward = true;
             if(PreFabToSpawn.name == "RWBakudan")
             {
                 Arrow.GetComponent<lookatme>().Forward = false;
                 Arrow.GetComponent<lookatme>().Backward = true;
             }
+            */
             Destroy(gameObject);
         }
 	}
@@ -47,12 +48,13 @@ public class BombThrow : MonoBehaviour
         {
             GameObject Bakudan = (GameObject)Instantiate(PreFabToSpawn, transform.position, transform.rotation);
             GameObject Arrow = (GameObject)Instantiate(ArrowToSpawn, transform.position, transform.rotation);
-            Arrow.GetComponent<lookatme>().Forward = true;
+           /* Arrow.GetComponent<lookatme>().Forward = true;
             if (PreFabToSpawn.name == "RWBakudan")
             {
                 Arrow.GetComponent<lookatme>().Forward = false;
                 Arrow.GetComponent<lookatme>().Backward = true;
             }
+            */
             Destroy(gameObject);
         }
 
