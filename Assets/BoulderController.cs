@@ -51,6 +51,12 @@ public class BoulderController : MonoBehaviour
             Save();
             //gameObject.transform.parent.name
         }
+
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            File.Delete(Application.persistentDataPath + "/" + gameObject.transform.parent.name + ".txt");
+        }
     }
 
     void Save()

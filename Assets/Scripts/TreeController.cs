@@ -47,6 +47,12 @@ public class TreeController : MonoBehaviour
             Save();
             //gameObject.transform.parent.name
         }
+
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            File.Delete(Application.persistentDataPath + "/" + WhereIsTheAnimator.name + ".txt");
+        }
     }
 
     void Save()

@@ -35,6 +35,12 @@ public class CabinController : MonoBehaviour
             Save();
             //gameObject.transform.parent.name
         }
+
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            File.Delete(Application.persistentDataPath + "/" + WhereIsTheCabin.name + ".txt");
+        }
     }
 
     void Save()

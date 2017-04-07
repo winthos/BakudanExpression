@@ -35,6 +35,12 @@ public class TinyLakeController : MonoBehaviour
             Save();
             //gameObject.transform.parent.name
         }
+
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            File.Delete(Application.persistentDataPath + "/" + gameObject.name + ".txt");
+        }
     }
 
     void Save()

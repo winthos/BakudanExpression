@@ -37,6 +37,12 @@ public class CarController : MonoBehaviour
         {
             Save();
         }
+
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            File.Delete(Application.persistentDataPath + "/" + gameObject.name + ".txt");
+        }
     }
 
     void Save()

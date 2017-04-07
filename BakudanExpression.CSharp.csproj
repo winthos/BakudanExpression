@@ -72,7 +72,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BoulderController.cs" />
     <Compile Include="Assets\CarController.cs" />
+    <Compile Include="Assets\DamController.cs" />
+    <Compile Include="Assets\FlowerController.cs" />
+    <Compile Include="Assets\LargeClockHandController.cs" />
+    <Compile Include="Assets\PlayerPositionSave.cs" />
     <Compile Include="Assets\Scripts\BombThrow.cs" />
     <Compile Include="Assets\Scripts\BombThrowController.cs" />
     <Compile Include="Assets\Scripts\CabinController.cs" />
@@ -80,6 +85,10 @@
     <Compile Include="Assets\Scripts\TreeController.cs" />
     <Compile Include="Assets\Scripts\YoungGrassController.cs" />
     <Compile Include="Assets\Scripts\lookatme.cs" />
+    <Compile Include="Assets\SlowlyFadeOut.cs" />
+    <Compile Include="Assets\SmallClockHandController.cs" />
+    <Compile Include="Assets\TinyLakeController.cs" />
+    <Compile Include="Assets\sundialcontroller.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
