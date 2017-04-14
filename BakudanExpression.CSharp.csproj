@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\lookatme.cs" />
     <Compile Include="Assets\SlowlyFadeOut.cs" />
     <Compile Include="Assets\SmallClockHandController.cs" />
+    <Compile Include="Assets\SwitchToLevel.cs" />
     <Compile Include="Assets\TinyLakeController.cs" />
     <Compile Include="Assets\sundialcontroller.cs" />
   </ItemGroup>

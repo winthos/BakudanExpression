@@ -35,14 +35,14 @@ public class BombThrowController : MonoBehaviour
             }
         }
 
-	    if (Input.GetMouseButtonDown(0) && ReadyToActivate == true)
+	    if (Input.GetMouseButtonDown(1) && ReadyToActivate == true)
         {
             ReadyToActivate = false;
             GameObject Bakudan = (GameObject)Instantiate(BombToSpawn, transform.position, transform.rotation);
             Bakudan.GetComponent<Rigidbody>().velocity = transform.forward * speed;
         }
 
-        if (Input.GetMouseButton(1) && ReadyToActivate == true)
+        if (Input.GetMouseButton(0) && ReadyToActivate == true)
         {
             ReadyToActivate = false;
             GameObject Baitsadasuto = (GameObject)Instantiate(RewindBombToSpawn, transform.position, transform.rotation);
